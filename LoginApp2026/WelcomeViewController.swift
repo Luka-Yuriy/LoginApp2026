@@ -18,8 +18,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welconeLabel.text = userName
-
-        // Do any additional setup after loading the view.
+        view.addVerticalGradientLayer()
     }
 
 }
