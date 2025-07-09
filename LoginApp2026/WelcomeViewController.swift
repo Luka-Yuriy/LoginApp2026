@@ -8,11 +8,13 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    //MARK: - IBOutlets
     @IBOutlet var welconeLabel: UILabel!
     
+    //MARK: - propherties
     var userName: String!
     
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         welconeLabel.text = userName
@@ -20,4 +22,30 @@ class WelcomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+}
+
+extension UIView {
+    func addVerticalGradientLayer() {
+        let primayColor = UIColor(
+            red: 210/255,
+            green: 109/255,
+            blue: 128/225,
+            alpha: 1
+        )
+        
+        let secondaryColor = UIColor(
+            red: 107/255,
+            green: 148/255,
+            blue: 230/255,
+            alpha: 1
+        )
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = [primayColor.cgColor, secondaryColor.cgColor]
+        gradient.locations = [0.0, 1.0]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        layer.insertSublayer(gradient, at: 0)
+    }
 }
