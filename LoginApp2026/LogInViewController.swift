@@ -21,6 +21,9 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func loginButtonDidTapped() {
+        if userNameTF.text != userName || passwordTF.text != password {
+            showAlert(title: "Wrong login or password!", message: "Enter the correct login and password ")
+        }
     }
     
     @IBAction func userNameHintButtomDidTapped() {
@@ -38,7 +41,6 @@ class LogInViewController: UIViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
-        
     }
 }
 

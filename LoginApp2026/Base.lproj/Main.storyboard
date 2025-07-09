@@ -129,6 +129,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ImP-fi-1Cu"/>
+                    <connections>
+                        <outlet property="welconeLabel" destination="aRt-yJ-tkm" id="lDC-I0-K58"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ea-bv-Azx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
