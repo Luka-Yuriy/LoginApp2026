@@ -7,22 +7,21 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet var welconeLabel: UILabel!
     
     //MARK: - propherties
-    var userName: String!
+    var userName = ""
     
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        welconeLabel.text = userName
+        welconeLabel.text = "Welcome, \(userName)"
         view.addVerticalGradientLayer()
     }
-
 }
-
+    //MARK: Extantions
 extension UIView {
     func addVerticalGradientLayer() {
         let primayColor = UIColor(

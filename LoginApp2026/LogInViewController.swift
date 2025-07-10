@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -19,25 +19,29 @@ class LogInViewController: UIViewController {
     //MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = "Welcome, \(userName)!"
+        welcomeVC.userName = userName
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     //MARK: - IBActions
     @IBAction func loginButtonDidTapped() {
-        if userNameTF.text != userName || passwordTF.text != password {
+        guard userNameTF.text == userName, passwordTF.text == password else {
             showAlert(
                 title: "Wrong login or password!",
                 message: "Enter the correct login and password "
             )
+            return
         }
     }
     
-    @IBAction func userNameHintButtomDidTapped() {
-        showAlert(title: "Oops!", message: "Your name is User")
-    }
-    
-    @IBAction func userPasswordHintButtonDidTapped() {
-        showAlert(title: "Oops!", message: "Your password is 1234")
+    @IBAction func fogotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Your name is \(userName)")
+        : showAlert(title: "Oops!", message: "Your password is \(password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

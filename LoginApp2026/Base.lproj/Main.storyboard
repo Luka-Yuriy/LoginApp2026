@@ -16,65 +16,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f66-S7-yRb">
-                                <rect key="frame" x="146.5" y="313.5" width="82" height="40.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log In">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="loginButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="aiS-7E-azZ"/>
-                                    <segue destination="kI7-Ym-NDT" kind="presentation" modalPresentationStyle="fullScreen" id="cKS-08-rn2"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="3Tu-8H-iki">
-                                <rect key="frame" x="16" y="370" width="343" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="gHi-Ih-bu3">
+                                <rect key="frame" x="30" y="208.5" width="315" height="190.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDt-b8-7jV">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="30"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Fogot User Name?"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-EW-Uau">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="84"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxU-o2-gZD">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-az-84l">
+                                                <rect key="frame" x="0.0" y="50" width="315" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f66-S7-yRb">
+                                        <rect key="frame" x="0.0" y="102" width="315" height="40.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="userNameHintButtomDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="nqd-Aj-g8q"/>
+                                            <action selector="loginButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="aiS-7E-azZ"/>
+                                            <segue destination="kI7-Ym-NDT" kind="presentation" modalPresentationStyle="fullScreen" id="cKS-08-rn2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-fV-2Es">
-                                        <rect key="frame" x="180.5" y="0.0" width="162.5" height="30"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Fogot Password?"/>
-                                        <connections>
-                                            <action selector="userPasswordHintButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="yxf-uN-0H5"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-EW-Uau">
-                                <rect key="frame" x="20" y="209.5" width="335" height="84"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxU-o2-gZD">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-az-84l">
-                                        <rect key="frame" x="0.0" y="50" width="335" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="3Tu-8H-iki">
+                                        <rect key="frame" x="0.0" y="160.5" width="315" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDt-b8-7jV">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Fogot User Name?"/>
+                                                <connections>
+                                                    <action selector="fogotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2bb-og-FzM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-fV-2Es">
+                                                <rect key="frame" x="197" y="0.0" width="118" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Fogot Password?"/>
+                                                <connections>
+                                                    <action selector="fogotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYE-Q6-GiX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XDc-EW-Uau" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8BZ-bu-Zkv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XDc-EW-Uau" secondAttribute="trailing" constant="20" id="MYr-uo-YZT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Tu-8H-iki" secondAttribute="trailing" constant="16" id="fgG-BE-aWa"/>
-                            <constraint firstItem="3Tu-8H-iki" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jfz-8g-w8K"/>
-                            <constraint firstItem="f66-S7-yRb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mHe-aV-OCh"/>
-                            <constraint firstItem="3Tu-8H-iki" firstAttribute="top" secondItem="f66-S7-yRb" secondAttribute="bottom" constant="16" id="o4u-yy-art"/>
-                            <constraint firstItem="f66-S7-yRb" firstAttribute="top" secondItem="XDc-EW-Uau" secondAttribute="bottom" constant="20" id="wAW-DK-00R"/>
-                            <constraint firstItem="f66-S7-yRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y86-1W-ceH"/>
+                            <constraint firstItem="gHi-Ih-bu3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="V4p-Bx-7Sc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHi-Ih-bu3" secondAttribute="trailing" constant="30" id="dF2-HD-NKH"/>
+                            <constraint firstItem="gHi-Ih-bu3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="joA-3b-ZJh"/>
+                            <constraint firstItem="gHi-Ih-bu3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zbG-UG-qYl"/>
                         </constraints>
                     </view>
                     <connections>
