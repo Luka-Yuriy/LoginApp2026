@@ -17,7 +17,7 @@ final class WelcomeViewController: UIViewController {
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        welconeLabel.text = "Welcome, \(userName)"
+        welconeLabel.text = "Welcome, \(userName)!"
         view.addVerticalGradientLayer()
     }
 }

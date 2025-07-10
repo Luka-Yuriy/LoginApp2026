@@ -28,7 +28,7 @@ final class LogInViewController: UIViewController {
     }
     
     //MARK: - IBActions
-    @IBAction func loginButtonDidTapped() {
+    @IBAction func logInPressed() {
         guard userNameTF.text == userName, passwordTF.text == password else {
             showAlert(
                 title: "Wrong login or password!",
@@ -36,6 +36,7 @@ final class LogInViewController: UIViewController {
             )
             return
         }
+        performSegue(withIdentifier: "openWelcomeVC", sender: nil)
     }
     
     @IBAction func fogotRegisterData(_ sender: UIButton) {
