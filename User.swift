@@ -19,13 +19,13 @@ struct Person {
 }
 
 extension User {
-    static func getPerson() -> [Person] {
-        [
+    static func getPerson() -> Person {
+        
             Person(
                 name: "Yuriy",
                 surname: "Luka",
                 photo: "SwiftImage",
                 hobbie: "Snowbording and traveling")
-        ]
+        
     }
 }
