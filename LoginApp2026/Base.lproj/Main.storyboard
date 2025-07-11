@@ -148,7 +148,7 @@
         <!--User-->
         <scene sceneID="Eb3-yQ-5IO">
             <objects>
-                <viewController id="17d-9q-XWe" sceneMemberID="viewController">
+                <viewController id="17d-9q-XWe" customClass="UserViewController" customModule="LoginApp2026" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C7Y-Ea-s1Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

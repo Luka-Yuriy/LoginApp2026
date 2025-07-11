@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5AFBE1402E2120CE00D5123D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBE13F2E2120CE00D5123D /* User.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5A1AEA7E2E1E9EB7007E084E /* LoginApp2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp2026.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFBE13F2E2120CE00D5123D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,6 +50,7 @@
 		5A1AEA752E1E9EB7007E084E = {
 			isa = PBXGroup;
 			children = (
+				5AFBE13F2E2120CE00D5123D /* User.swift */,
 				5A1AEA802E1E9EB7007E084E /* LoginApp2026 */,
 				5A1AEA7F2E1E9EB7007E084E /* Products */,
 			);
@@ -132,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFBE1402E2120CE00D5123D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
