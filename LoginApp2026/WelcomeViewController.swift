@@ -12,12 +12,12 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var welconeLabel: UILabel!
     
     //MARK: - Propherties
-    var userName = ""
+    var user: User!
     
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        welconeLabel.text = "Welcome, \(userName)!"
+        welconeLabel.text = "Welcome, \(user.person.name)!"
         view.addVerticalGradientLayer()
     }
 }

@@ -15,14 +15,14 @@ class UserInfoViewController: UIViewController {
     @IBOutlet var userHobiesLabel: UILabel!
     
     //MARK: - Private propherties
-    private let userModel = User.getPerson()
+    var user: User!
 
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        userPhotoImageView.image = UIImage(named: userModel.photo)
-        userNameLabel.text = "Name: \(userModel.name)"
-        userSurnameLabel.text = "Surname: \(userModel.surname)"
-        userHobiesLabel.text = "Hobies: \(userModel.hobbie)"
+        userPhotoImageView.image = UIImage(named: user.person.photo)
+        userNameLabel.text = "Name: \(user.person.name)"
+        userSurnameLabel.text = "Surname: \(user.person.surname)"
+        userHobiesLabel.text = "Hobies: \(user.person.hobbie)"
     }
 }

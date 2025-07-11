@@ -9,11 +9,11 @@ import UIKit
 
 class UserViewController: UIViewController {
     //MARK: - Propherties
-    var userName = ""
+    var user: User!
     
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = userName
+        self.title = user.person.name
     }
 }
