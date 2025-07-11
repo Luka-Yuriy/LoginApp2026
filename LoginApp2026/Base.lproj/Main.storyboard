@@ -236,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="3109.5999999999999" y="769.56521739130437"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="lNM-qq-KoL">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="q9B-We-SoU" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="q9B-We-SoU" customClass="TabBarViewController" customModule="LoginApp2026" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FS3-NC-E6w">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
