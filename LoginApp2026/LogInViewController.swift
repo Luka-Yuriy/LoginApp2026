@@ -13,7 +13,7 @@ final class LogInViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     //MARK: - Private propherties
-    private let userName = "1"
+    private let userName = "Luka Yuriy"
     private let password = "1"
     
     //MARK: - Override methods
@@ -25,7 +25,7 @@ final class LogInViewController: UIViewController {
                 welcomeVC.userName = userName
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let userVC = navigationVC.topViewController as? UserViewController else { return }
-                userVC.title = userName
+                userVC.userName = userName
             }
         }
     }
