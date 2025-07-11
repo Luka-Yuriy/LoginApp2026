@@ -11,7 +11,7 @@ final class WelcomeViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet var welconeLabel: UILabel!
     
-    //MARK: - propherties
+    //MARK: - Propherties
     var userName = ""
     
     //MARK: - Override methods

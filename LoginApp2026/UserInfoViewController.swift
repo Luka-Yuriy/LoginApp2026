@@ -8,14 +8,16 @@
 import UIKit
 
 class UserInfoViewController: UIViewController {
-    
+    //MARK: - IBOutlets
     @IBOutlet var userPhotoImageView: UIImageView!
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var userSurnameLabel: UILabel!
     @IBOutlet var userHobiesLabel: UILabel!
     
+    //MARK: - Private propherties
     private let userModel = User.getPerson()
 
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         userPhotoImageView.image = UIImage(named: userModel.photo)

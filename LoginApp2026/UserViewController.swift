@@ -8,8 +8,10 @@
 import UIKit
 
 class UserViewController: UIViewController {
+    //MARK: - Propherties
     var userName = ""
     
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = userName
